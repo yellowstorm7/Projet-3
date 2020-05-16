@@ -1,8 +1,27 @@
-header
+@font-face {
+    font-family: 'Devonshire-Regular';
+    src: url('fonts/Devonshire-Regular/Devonshire-Regular.eot');
+    src: url('fonts/Devonshire-Regular/Devonshire-Regular.otf');
+         url('fonts/Devonshire-Regular/Devonshire-Regular.svg');
+         url('fonts/Devonshire-Regular/Devonshire-Regular.ttf');
+         url('fonts/Devonshire-Regular/Devonshire-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Verao';
+	src: url('fonts/Verao-PriReg.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+body
 {
-	display: block;
-    height: 50px;
-    background-color: rgb(87, 156, 135);
+	margin: 0;
+}
+a
+{
+	text-decoration: none;
+	color: black;
 }
 h1
 {
@@ -11,9 +30,72 @@ h1
     text-align: center;
     padding-top: 4px;
 }
+h2
+{
+	text-align: center;
+}
+h4
+{
+	display: inline-block;
+	position: relative;
+	left: 43%;
+	text-decoration: none;
+	background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 2px, transparent 4px) no-repeat;
+	background-size: 0 100%;
+	transition: background-size 0.3s;
+}
+h4:hover
+{
+	background-size: 100% 100%;
+}
+p
+{
+	padding-left: 5%;
+}
+.fas
+{
+	font-size: 50%;
+}
+.fas1
+{
+	animation: bounce 0.6s ease infinite;
+}
+.fas2
+{
+	animation: bounce 0.6s ease infinite; 
+	animation-delay: 0.2s;
+}
+.fas3
+{
+	animation: bounce 0.6s ease infinite;
+	animation-delay: 0.4s;
+}
+.price
+{
+	float: right;
+	padding-right: 5%;
+}
+header
+{
+	display: block;
+    height: 50px;
+    background-color: rgb(87, 156, 135);
+}
 main
 {
 	height: 100vh;
+}
+main article
+{
+	transform: scale(1);
+    transition: transform 400ms;
+    overflow: hidden;
+}
+main article:hover
+{
+	transform: scale(1.15);
+	z-index: 1;
+	opacity: 0.5;
 }
 .container
 {
@@ -26,7 +108,6 @@ main
 	margin: auto;
 	flex-wrap: wrap;
 }
-
 .container section
 {
 	display: flex;
@@ -35,54 +116,11 @@ main
 	margin: 2% 2%;
 	justify-content: center;
 	text-align: center;
-}
-.first
-{
-    background-color: rgb(253,235,232);
-    border: 0.5px solid black;
-}
-.first article, .second article, .third article, .fourth article
-{
-	transform: scale(1);
-    transition: transform 400ms;
-    overflow: hidden;
-}
-.first:hover article, .second:hover article, .third:hover article, .fourth:hover article
-{
-	transform: scale(1.15);
-	z-index: 1;
-	opacity: 0.5;
-}
-.first h2,h3
-{
-	color: rgb(60, 18,24);
-}
-.second
-{
-	background-color: rgb(255, 245, 254);
 	border: 0.5px solid black;
 }
-.second h3
+.container h3
 {
-	color: rgb(199, 116, 18);
-}
-.third
-{
-	background-color: rgb(237, 239, 239);
-	border: 0.5px solid black;
-}
-.third h3
-{
-	color: rgb(8, 135,251);
-}
-.fourth
-{
-	background-color: rgb(187, 255, 153, 0.5);
-	border: 0.5px solid black;
-}
-.fourth h3
-{
-	color: rgb(114, 191, 86);
+	font-size: 1.5em;
 }
 .later
 {
@@ -115,35 +153,75 @@ footer
     bottom: 0;
     margin-bottom: 5px;
 }
-footer article
-{
-	color: rgb(253, 203, 70);
-}
 footer p
 {
 	display: flex;
 	justify-content: space-around;
 }
-.shake:hover
-{
-	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97);
-}
-
 footer a 
 {
 	color: rgb(253, 203, 70);
 }
-
-a
+.menu1
 {
-	text-decoration: none;
-	color: black;
+    background-color: rgb(253,235,232);
 }
-h2
+.menu1 h2,h3
 {
-	text-align: center;
+	color: rgb(60, 18,24);
 }
-.contenu1, .contenu2, .contenu3, .contenu4
+.menu1 h2
+{
+	font-family: 'Devonshire-Regular';
+}
+.menu2
+{
+	background-color: rgb(255, 245, 254);
+}
+.menu2 h3
+{
+	color: rgb(199, 116, 18);
+}
+.menu2 article
+{
+	background: -webkit-gradient(linear, left top, right bottom, from(rgb(223, 135, 30)), to(rgb(143, 91, 254)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.menu3
+{
+	background-color: rgb(237, 239, 239);
+}
+.menu3 h3
+{
+	color: rgb(8, 135,251);
+}
+.menu3 article
+{
+	background: -webkit-gradient(linear, left top, right bottom, from(rgb(2, 45, 223)), to(rgb(8, 137, 251)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.menu3 h2, .delice h2
+{
+	font-family: 'Verao';
+	font-size: 2.5em;
+}
+.menu4
+{
+	background-color: rgb(187, 255, 153, 0.5);
+}
+.menu4 h3
+{
+	color: rgb(114, 191, 86);
+}
+.menu4 article
+{
+	background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.note, .chic, .delice, .palette
 {
 	display: flex;
 	flex-direction: column;
@@ -152,74 +230,142 @@ h2
 	margin-top: 2%;
 	margin-bottom: 100px;
 }
-h4
+.note
 {
-	display: inline-block;
-	position: relative;
-	left: 43%;
-	text-decoration: none;
-	background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 2px, transparent 4px) no-repeat;
-	background-size: 0 100%;
-	transition: background-size 0.3s;
+	background-color: rgb(252,223,219);
 }
-h4:hover
+.note h2
 {
-	background-size: 100% 100%;
+	font-family: 'Devonshire-Regular';
 }
-.contenu2, .contenu3 h4
+.chic
+{
+	background-color: rgb(255, 245, 254);
+}
+.chic h2
+{
+	background: -webkit-gradient(linear, left top, right bottom, from(rgb(223, 135, 30)), to(rgb(143, 91, 254)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.chic, .delice h4
 {
 	left: 38%;
 }
-.contenu4 h4
+.delice
+{
+	background-color: rgb(237, 239, 239);
+}
+.delice h2
+{
+	background: -webkit-gradient(linear, left top, right bottom, from(rgb(2, 45, 223)), to(rgb(8, 137, 251)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.palette
+{
+	background-color: rgb(187, 255, 153, 0.5)
+}
+.palette h2
+{
+	background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.palette h4
 {
 	left: 40%;
+}
+.decoleft, .decoright, .decoleft2, .decoright2
+{
+	border-bottom: 2px solid black;
+	display: block;
+	position: relative;
+}
+.decoleft, .decoright
+{
+	width: 30%;
+}
+.decoleft, .decoleft2
+{
+	
+	width: 30%;
+	margin-left: 5%;
+	top: 32px;
+}
+.decoright
+{
+	margin-right: 5%;
+	bottom: 31px;
+	left: 65%;
+}
+.decoright2
+{
+    width: 28%;
+    margin-right: 5%;
+    bottom: 31px;
+    left: 70%;
+}
+.decoleft4, .decoright4
+{
+	height: 5px;
+    background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
+    -webkit-text-fill-color: transparent;
+    display: block;
+    width: 30%;
+    margin-left: 5%;
+    position: relative;
+    top: 32px;
+}
+.decoleft4
+{
+	margin-left: 5%;
+	top: 32px;
+}
+.decoright4
+{
+    margin-left: 65%;
+    top: -31px;
 }
 #entree
 {
 	left: 47%;
 }
-.price
+.entree2
 {
-	float: right;
-	padding-right: 5%;
+	color: rgb(198, 116, 18);
 }
-.contenu1
+.plat2
 {
-	background-color: rgb(252,223,219);
+	color: rgb(165, 103, 153);
 }
-.contenu2
+.dessert2
 {
-	background-color: rgb(255, 245, 254);
+	color: rgb(110, 76, 204);
 }
-.contenu3
+.entree2 .decoleft2, .entree2 .decoright2
 {
-	background-color: rgb(237, 239, 239);
+	border-bottom: 3px solid rgb(198, 116, 18);
 }
-.contenu4
+.plat2 .decoleft2, .plat2 .decoright2
 {
-	background-color: rgb(187, 255, 153, 0.5)
+	border-bottom: 3px solid rgb(165, 103, 153);
 }
-p
+.dessert2 .decoleft2, .dessert2 .decoright2
 {
-	padding-left: 5%;
+	border-bottom: 3px solid rgb(110, 76, 204);
 }
-.fas
+.entree3 .decoleft, .entree3 .decoright
 {
-	font-size: 50%;
+	border-bottom: 3px solid rgb(2, 40, 221);
 }
-.fas1
+.plat3 .decoleft, .plat3 .decoright
 {
-	animation: bounce 0.6s ease infinite;
+	border-bottom: 3px solid rgb(6, 112, 243);
 }
-.fas2
+.dessert3 .decoleft, .dessert3 .decoright
 {
-	animation: bounce 0.6s ease infinite; 
-	animation-delay: 0.2s;
-}
-.fas3
-{
-	animation: bounce 0.6s ease infinite;
-	animation-delay: 0.4s;
+	border-bottom: 3px solid rgb(34, 157, 249);
 }
 @keyframes bounce{
      from {transform: translateY(0);}
@@ -238,162 +384,9 @@ p
 		transform: translate3d(10px, 0, 0);
 	}
 }
-.trait1, .trait1bis, .trait2, .trait2bis
+.shake:hover
 {
-	border-bottom: 2px solid black;
-}
-.trait1, .trait2
-{
-	display: block;
-	width: 30%;
-	margin-left: 5%;
-	position: relative;
-	top: 32px;
-}
-.trait1bis
-{
-	display: block;
-	width: 30%;
-	margin-right: 5%;
-	position: relative;
-	bottom: 31px;
-	left: 65%;
-}
-.trait2bis
-{
-	display: block;
-    width: 28%;
-    margin-right: 5%;
-    position: relative;
-    bottom: 31px;
-    left: 70%;
-}
-.contenu2 h2
-{
-	background: -webkit-gradient(linear, left top, right bottom, from(rgb(223, 135, 30)), to(rgb(143, 91, 254)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.section1
-{
-	color: rgb(198, 116, 18);
-}
-.section2
-{
-	color: rgb(165, 103, 153);
-}
-.section3
-{
-	color: rgb(110, 76, 204);
-}
-.section1 .trait2, .section1 .trait2bis
-{
-	border-bottom: 3px solid rgb(198, 116, 18);
-}
-.section2 .trait2, .section2 .trait2bis
-{
-	border-bottom: 3px solid rgb(165, 103, 153);
-}
-.section3 .trait2, .section3 .trait2bis
-{
-	border-bottom: 3px solid rgb(110, 76, 204);
-}
-.contenu3 h2
-{
-	background: -webkit-gradient(linear, left top, right bottom, from(rgb(2, 45, 223)), to(rgb(8, 137, 251)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.section4 .trait1, .section4 .trait1bis
-{
-	border-bottom: 3px solid rgb(2, 40, 221);
-}
-.section5 .trait1, .section5 .trait1bis
-{
-	border-bottom: 3px solid rgb(6, 112, 243);
-}
-.section6 .trait1, .section6 .trait1bis
-{
-	border-bottom: 3px solid rgb(34, 157, 249);
-}
-.contenu4 h2
-{
-	background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.section7 .trait4
-{
-	height: 5px;
-    background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
-    -webkit-text-fill-color: transparent;
-    display: block;
-    width: 30%;
-    margin-left: 5%;
-    position: relative;
-    top: 32px;
-}
-.section7 .trait4bis
-{
-	height: 5px;
-    background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
-    -webkit-text-fill-color: transparent;
-    display: block;
-    width: 30%;
-    margin-left: 65%;
-    position: relative;
-    top: -31px;
-}
-@font-face {
-    font-family: 'Devonshire-Regular';
-    src: url('fonts/Devonshire-Regular/Devonshire-Regular.eot');
-    src: url('fonts/Devonshire-Regular/Devonshire-Regular.otf');
-         url('fonts/Devonshire-Regular/Devonshire-Regular.svg');
-         url('fonts/Devonshire-Regular/Devonshire-Regular.ttf');
-         url('fonts/Devonshire-Regular/Devonshire-Regular.woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-	font-family: 'Verao';
-	src: url('fonts/Verao-PriReg.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-.third h2, .contenu3 h2
-{
-	font-family: 'Verao';
-	font-size: 2.5em;
-}
-.contenu1 h2
-{
-	font-family: 'Devonshire-Regular';
-}
-.second article
-{
-	background: -webkit-gradient(linear, left top, right bottom, from(rgb(223, 135, 30)), to(rgb(143, 91, 254)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.first h2
-{
-	font-family: 'Devonshire-Regular';
-}
-.third article
-{
-	background: -webkit-gradient(linear, left top, right bottom, from(rgb(2, 45, 223)), to(rgb(8, 137, 251)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.fourth article
-{
-	background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.container h3
-{
-	font-size: 1.5em;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 @media screen and (max-width : 1024px)
 {
@@ -408,7 +401,7 @@ p
 	.container section{
 		font-size: 2.5em;
 	}
-	.contenu1, .contenu2, .contenu3, .contenu4 {
+	.note, .chic, .delice, .palette {
 		margin-top: 10%;
 	}
 	.later {
