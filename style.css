@@ -18,6 +18,7 @@ body
 {
 	margin: 0;
 }
+/* Balises toutes seules */
 a
 {
 	text-decoration: none;
@@ -75,6 +76,7 @@ p
 	float: right;
 	padding-right: 5%;
 }
+/* CSS du index.html */
 header
 {
 	display: block;
@@ -221,6 +223,7 @@ footer a
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* CSS de chaque menu */
 .note, .chic, .delice, .palette
 {
 	display: flex;
@@ -276,6 +279,7 @@ footer a
 {
 	left: 40%;
 }
+/* CSS pour trait autour des entrées, plats, desserts */
 .decoleft, .decoright, .decoleft2, .decoright2
 {
 	border-bottom: 2px solid black;
@@ -367,6 +371,7 @@ footer a
 {
 	border-bottom: 3px solid rgb(34, 157, 249);
 }
+/* Animations */
 @keyframes bounce{
      from {transform: translateY(0);}
      to   {transform: translateY(-10px);}
@@ -388,6 +393,7 @@ footer a
 {
 	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97);
 }
+/* Responsive */
 @media screen and (max-width : 1024px)
 {
 	header{
