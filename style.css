@@ -421,9 +421,6 @@ footer a
 		font-size: 1.75em;
 	}
 	footer article {
-		padding-left: 18%;
-	}
-	.right-align {
-		padding-right: 20%;
+		padding-left: 0;
 	}
 }
