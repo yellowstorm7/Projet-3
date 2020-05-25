@@ -24,6 +24,10 @@ a
 	text-decoration: none;
 	color: black;
 }
+header a
+{
+	color: rgb(253, 203, 70);
+}
 h1
 {
 	color: rgb(253, 203, 70);
@@ -35,7 +39,7 @@ h2
 {
 	text-align: center;
 }
-h4
+.note h3, .chic h3, .delice h3, .palette h3
 {
 	display: inline-block;
 	position: relative;
@@ -45,7 +49,7 @@ h4
 	background-size: 0 100%;
 	transition: background-size 0.3s;
 }
-h4:hover
+.note h3:hover, .chic h3:hover, .delice h3:hover, .palette h3:hover
 {
 	background-size: 100% 100%;
 }
@@ -87,13 +91,13 @@ main
 {
 	height: 100vh;
 }
-main article
+.zoom
 {
 	transform: scale(1);
     transition: transform 400ms;
     overflow: hidden;
 }
-main article:hover
+.zoom:hover
 {
 	transform: scale(1.15);
 	z-index: 1;
@@ -184,7 +188,7 @@ footer a
 {
 	color: rgb(199, 116, 18);
 }
-.menu2 article
+.menu2 h2, .menu2 h3
 {
 	background: -webkit-gradient(linear, left top, right bottom, from(rgb(223, 135, 30)), to(rgb(143, 91, 254)));
     -webkit-background-clip: text;
@@ -198,7 +202,7 @@ footer a
 {
 	color: rgb(8, 135,251);
 }
-.menu3 article
+.menu3 h2, .menu3 h3
 {
 	background: -webkit-gradient(linear, left top, right bottom, from(rgb(2, 45, 223)), to(rgb(8, 137, 251)));
     -webkit-background-clip: text;
@@ -217,7 +221,7 @@ footer a
 {
 	color: rgb(114, 191, 86);
 }
-.menu4 article
+.menu4 h2, .menu4 h3
 {
 	background: -webkit-gradient(linear, left top, right bottom, from(rgb(65, 150, 60)), to(rgb(190, 255, 127)));
     -webkit-background-clip: text;
@@ -251,7 +255,11 @@ footer a
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.chic, .delice h4
+.entree2 h3, .dessert2 h3
+{
+	left: 38%;
+}
+.chic, .delice h3
 {
 	left: 38%;
 }
@@ -275,7 +283,7 @@ footer a
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.palette h4
+.palette h3
 {
 	left: 40%;
 }
@@ -335,15 +343,15 @@ footer a
 {
 	left: 47%;
 }
-.entree2
+.entree2, .entree2 h3
 {
 	color: rgb(198, 116, 18);
 }
-.plat2
+.plat2, .plat2 h3
 {
 	color: rgb(165, 103, 153);
 }
-.dessert2
+.dessert2, .dessert2 h3
 {
 	color: rgb(110, 76, 204);
 }
@@ -409,6 +417,40 @@ footer a
 	}
 	.note, .chic, .delice, .palette {
 		margin-top: 10%;
+		width: 100%;
+		margin-left: 0;
+	}
+	.note h3, .chic h3, .delice h3, .palette h3
+	{
+		font-size: 1.75em
+	}
+	.decoleft
+	{
+		top: 50px;
+	}
+	.decoright
+	{
+		bottom: 37px;
+	}
+	.decoleft2
+	{
+		top: 48px;
+	}
+	.decoright2
+	{
+		bottom: 41px;
+	}
+	.decoleft4
+	{
+		top: 46px;
+	}
+	.decoright4
+	{
+		top: -45px;
+	}
+	.price
+	{
+		font-size: 2em;
 	}
 	.later {
 		width: 30%;
