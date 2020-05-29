@@ -454,7 +454,7 @@ footer a
 	{
 		bottom: 32px;
 		width: 23%;
-		margin-left: 5%;
+		margin-left: 10%;
 	}
 	.decoleft2
 	{
@@ -467,6 +467,11 @@ footer a
 		width: 19%;
 		margin-left: 10%;
 	}
+	.entree .decoright2
+	{
+		width: 15%;
+		margin-left: 15%;
+	}
 	.delice .decoleft
 	{
 		width: 20%;
@@ -474,7 +479,7 @@ footer a
 	.delice .decoright
 	{
 		width: 20%;
-		margin-left: 10%;
+		margin-left: 15%;
 	}
 	#entree {
 		left: 45%;
@@ -488,7 +493,7 @@ footer a
 	{
 		top: -32px;
 		width: 25%;
-		margin-left: 70%;
+		margin-left: 75%;
 	}
 	.price
 	{
